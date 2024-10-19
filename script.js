@@ -1,17 +1,24 @@
 // script.js
 
-// Toggle between light and dark theme
-function toggleTheme() {
-    const body = document.body;
-    body.classList.toggle("dark-theme");
-}
+// Theme toggle functionality
+document.getElementById("theme-toggle").addEventListener("click", function () {
+    document.body.classList.toggle("dark-theme");
+});
 
-// Event listener to display a welcome message
+// Display current year in the footer
 document.addEventListener("DOMContentLoaded", function () {
-    const welcomeBtn = document.getElementById("welcome-btn");
-    const message = document.getElementById("message");
+    const currentYear = new Date().getFullYear();
+    document.getElementById("current-year").textContent = currentYear;
+});
 
-    welcomeBtn.addEventListener("click", function () {
-        message.innerText = "Hello! Welcome to our website.";
-    });
+// Personalized welcome message
+document.getElementById("welcome-btn").addEventListener("click", function () {
+    const name = document.getElementById("name-input").value;
+    const welcomeMessage = document.getElementById("welcome-message");
+
+    if (name) {
+        welcomeMessage.textContent = `Welcome, ${name}! We're glad to have you here.`;
+    } else {
+        welcomeMessage.textContent = "Please enter your name to get a personalized welcome message.";
+    }
 });

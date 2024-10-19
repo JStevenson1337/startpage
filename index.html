@@ -3,39 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customizable Home Page</title>
-    <!-- Link to external CSS file -->
+    <title>Simple Interactive Home Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Customizable Home Page</h1>
+        <div class="logo">
+            <h1>Welcome to My Website</h1>
+        </div>
         <nav>
             <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="about.php">About</a></li>
-                <li><a href="contact.php">Contact</a></li>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <button id="theme-toggle">Switch Theme</button>
     </header>
 
     <main>
-        <section class="intro">
-            <h2>Introduction</h2>
-            <p>This is an example of a customizable home page built using HTML, CSS, and PHP.</p>
-        </section>
-
-        <section class="content">
-            <h2>Dynamic Content</h2>
-            <?php
-                $dynamicText = "Welcome to my website! Customize the content below.";
-                echo "<p>$dynamicText</p>";
-            ?>
+        <section>
+            <h2>Welcome, Guest!</h2>
+            <p id="welcome-message">We are glad to have you here. Click the button below to get a personalized welcome message.</p>
+            <input type="text" id="name-input" placeholder="Enter your name">
+            <button id="welcome-btn">Get Welcome Message</button>
         </section>
     </main>
 
     <footer>
-        <p>&copy; <?php echo date("Y"); ?> My Custom Website</p>
+        <p>&copy; <span id="current-year"></span> My Simple Website. All rights reserved.</p>
     </footer>
+
+    <!-- Include JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>

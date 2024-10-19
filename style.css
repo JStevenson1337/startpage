@@ -4,27 +4,31 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    transition: background-color 0.3s ease;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header {
     background-color: #333;
+    color: white;
     padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: center;
 }
 
-header .logo img {
-    height: 50px;
+header .logo h1 {
+    margin: 0;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
+    list-style: none;
     padding: 0;
     display: flex;
+    justify-content: center;
     gap: 15px;
+}
+
+nav ul li {
+    display: inline;
 }
 
 nav ul li a {
@@ -50,10 +54,10 @@ button#theme-toggle:hover {
     background-color: #008c9e;
 }
 
-/* Dark theme styling */
+/* Dark theme */
 .dark-theme {
     background-color: #333;
-    color: #fff;
+    color: white;
 }
 
 .dark-theme header {
@@ -66,68 +70,34 @@ button#theme-toggle:hover {
 
 main {
     padding: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-/* style.css */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
-
-.login-container {
-    width: 300px;
-    margin: 100px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.login-container h2 {
     text-align: center;
 }
 
-.login-container form {
-    display: flex;
-    flex-direction: column;
-}
-
-.login-container form div {
-    margin-bottom: 15px;
-}
-
-.login-container form label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.login-container form input {
-    padding: 10px;
-    font-size: 14px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.login-container form button {
+input#name-input {
     padding: 10px;
     font-size: 16px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+button#welcome-btn {
+    padding: 10px 20px;
     background-color: #0fccce;
     color: white;
     border: none;
     cursor: pointer;
 }
 
-.login-container form button:hover {
+button#welcome-btn:hover {
     background-color: #008c9e;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
